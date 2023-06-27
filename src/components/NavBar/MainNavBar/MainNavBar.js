@@ -1,3 +1,5 @@
+
+import {CartWidget} from '../CartWidget/CartWidget';
 export const MainNavBar = () => {
     return(
         <div className="main_navbar">
@@ -11,8 +13,9 @@ export const MainNavBar = () => {
                 </ul>
             </div>
             <div>
-                <ion-icon className="icono_navbar" size="large" name="bag-handle-outline"></ion-icon>
-                <ion-icon className="icono_navbar" size="large" name="person-circle-outline"></ion-icon>
+                <CartWidget />
+                <span class="notification-badge">3</span>
+                
             </div>
         </div>
     )

@@ -1,11 +1,11 @@
 
 import {NavBar} from './components/NavBar/NavBar.js';
-import {Greeting} from './components/Body/Greeting.js';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.js';
 function App() {
   return (
     <div>
       <NavBar/>
-      <Greeting/>
+      <ItemListContainer greeting={'Bienvenido a Nuestra Tienda Virtual'} />
     </div>
   );
 }
