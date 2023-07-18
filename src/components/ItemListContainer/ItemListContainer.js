@@ -1,18 +1,27 @@
+import { useState, useEffect } from "react";
+import {getProducts, getProductsByCategory} from "../../asyncMock.js";
+import ItemList from "../ItemList/ItemList.js";
+import { useParams } from "react-router-dom";
 const ItemListContainer = ({ greeting }) => {
-    const containerStyle = {
-        padding: '20px',
-        borderRadius: '5px',
-        textAlign: 'center',
-    };
+    const [products, setProducts] = useState([]);
 
-    const greetingStyle = {
-        color: 'black',
-        fontSize: '24px',
-    };
+    const { categoryId } = useParams()
+
+    useEffect(() => {
+        const asyncFunction = categoryId ? getProductsByCategory : getProducts
+        asyncFunction(categoryId)
+            .then(response => {
+                setProducts(response);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }, [categoryId]);
 
     return (
-        <div style={containerStyle}>
-        <h2 style={greetingStyle}>{greeting}</h2>
+        <div className="p-4 text-center">
+            <h2 className="text-black text-2xl">{greeting}</h2>
+            <ItemList products={products} />
         </div>
     );
 };

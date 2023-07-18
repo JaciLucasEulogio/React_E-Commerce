@@ -1,22 +1,44 @@
-
-import {CartWidget} from '../CartWidget/CartWidget';
+import { NavLink, Link } from "react-router-dom";
+import { CartWidget } from "../CartWidget/CartWidget";
 export const MainNavBar = () => {
-    return(
-        <div className="main_navbar">
-            <div className="logo_container flex justify-between">LOGO<img src="" alt="" /></div>
-            <div className="main_menu">
-                <ul className="flex">
-                    <li className="nav-item">Categoria 1</li>
-                    <li className="nav-item">Categoria 2</li>
-                    <li className="nav-item">Categoria 3</li>
-                    <li className="nav-item">Categoria 4</li>
-                </ul>
-            </div>
-            <div>
-                <CartWidget />
-                <span class="notification-badge">3</span>
-                
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="main_navbar">
+      <Link
+        to="/"
+        className="logo_container flex justify-between"
+      >
+        <h3>LOGO</h3>
+      </Link>
+      <div className="main_menu">
+        <NavLink
+          to={`/category/samsung`}
+          className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+        >
+          <span className="text-gray-700 hover:text-blue-500 hover:font-semibold cursor-pointer m-2">
+            Samsung
+          </span>
+        </NavLink>
+        <NavLink
+          to={`/category/iphone`}
+          className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+        >
+          <span className="text-gray-700 hover:text-blue-500 hover:font-semibold cursor-pointer m-2">
+            Iphone
+          </span>
+        </NavLink>
+        <NavLink
+          to={`/category/xiaomi`}
+          className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+        >
+          <span className="text-gray-700 hover:text-blue-500 hover:font-semibold cursor-pointer m-2">
+            Xiaomi
+          </span>
+        </NavLink>
+      </div>
+      <div>
+        <CartWidget />
+        <span className="notification-badge animate-bounce">3</span>
+      </div>
+    </div>
+  );
+};
