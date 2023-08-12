@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import {getProducts, getProductsByCategory} from "../../asyncMock.js";
 import ItemList from "../ItemList/ItemList.js";
 import { useParams } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
