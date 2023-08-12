@@ -1,13 +1,3 @@
-
-// export const TopNavBar = () => {
-//     return (
-//         <div className="top_nav">
-
-//         </div>
-//     )
-// }
-
-
 import React, { useEffect, useState } from 'react';
 
 export const TopNavBar = () => {
@@ -16,7 +6,7 @@ export const TopNavBar = () => {
     useEffect(() => {
         const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
-        const shouldHide = currentScrollPos > 0; // Ocultar el div cuando se haya desplazado
+        const shouldHide = currentScrollPos > 0; 
 
         setIsVisible(!shouldHide);
         };
