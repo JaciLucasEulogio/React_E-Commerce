@@ -37,7 +37,6 @@ export const MainNavBar = () => {
       </div>
       <div>
         <CartWidget />
-        <span className="notification-badge animate-bounce">3</span>
       </div>
     </div>
   );

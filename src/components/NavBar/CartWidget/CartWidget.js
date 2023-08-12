@@ -1,13 +1,22 @@
-import React from "react";
-import { FaShoppingCart } from "react-icons/fa";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
+import { Link } from "react-router-dom";
+import cart from "../../../assets/cart.png";
 
 export const CartWidget = () => {
+  const { totalQuantity } = useContext(CartContext);
+
   return (
-    <div
-      className="cart-widget"
-      id="1"
+    <Link
+      to="/cart"
+      className={`flex items-center ${totalQuantity > 0 ? "block" : "hidden"}`}
     >
-      <FaShoppingCart size={25} />
-    </div>
+      <img
+        src={cart}
+        alt="cart-widget"
+        className="w-6 h-6 mr-2"
+      />
+      <span className="text-sm font-medium">{totalQuantity}</span>
+    </Link>
   );
 };
