@@ -6,13 +6,9 @@ Este proyecto fue creado utilizando Create React App.
 
 ¡Prepárate para sumergirte en una experiencia de compra virtual como ninguna otra! En nuestra tienda, encontrarás una selección de productos asombrosos que te dejarán boquiabierto. Desde artículos únicos hasta los imprescindibles del día a día, nuestra tienda virtual tiene algo para todos.
 
-## Características Destacadas
+## Video Demostrativo
 
-- Explora una amplia gama de productos curados con amor y cuidado.
-- Agrega tus productos favoritos al carrito y ¡observa cómo se multiplican automáticamente en cantidad y diversión!
-- Experimenta la emoción de ver tus productos agregados en tiempo real con nuestra función de contador de elementos.
-- Un carrito inteligente que calcula tu total y cantidad de productos de forma mágica.
-- Listo para acompañarte en todas tus aventuras de compra en línea.
+[![Video Demostrativo]](https://youtu.be/2h-35pcZso8)
 
 ## Tecnologías Utilizadas
 
